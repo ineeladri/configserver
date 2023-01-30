@@ -21,7 +21,7 @@ node {
       }
 	stage("SSH Into Server") {
        def remote = [:]
-       remote.name = 'Claims1'
+       remote.name = 'Claims-1'
        remote.host = '20.232.127.94'
        remote.user = 'azureuser'
        remote.password = 'Miracle@1234'
@@ -31,8 +31,7 @@ node {
 	     sh 'docker stop configserver1 || true && docker rm -f configserver1 || true'
 	     sh 'docker run -d -p 8888:8888 --name configserver1 configserver1:latest'
      }
-
-      }
+}
 
 
 
